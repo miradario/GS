@@ -11,9 +11,14 @@ export default {
               TabOneScreen: 'one',
             },
           },
-          TabTwo: {
+          Meditate: {
             screens: {
-              TabTwoScreen: 'two',
+              MeditateScreen: 'two',
+            },
+          },
+          Audios: {
+            screens: {
+              AudiosScreen: 'two',
             },
           },
         },

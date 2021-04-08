@@ -5,13 +5,19 @@ export type RootStackParamList = {
 
 export type BottomTabParamList = {
   TabOne: undefined;
-  TabTwo: undefined;
+  MEditate: undefined;
 };
 
 export type TabOneParamList = {
   TabOneScreen: undefined;
 };
 
-export type TabTwoParamList = {
-  TabTwoScreen: undefined;
+export type MeditateParamList = {
+  MeditateScreen: undefined;
+  AudioScreen: undefined;
+
+};
+
+export type TabBreatheParamList = {
+  TabBreatheScreen: undefined;
 };

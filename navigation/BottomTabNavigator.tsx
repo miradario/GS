@@ -5,9 +5,11 @@ import * as React from 'react';
 
 import Colors from '../constants/Colors';
 import useColorScheme from '../hooks/useColorScheme';
+import Breathe from '../screens/Breathe/Breathe';
 import TabOneScreen from '../screens/TabOneScreen';
-import TabTwoScreen from '../screens/TabTwoScreen';
-import { BottomTabParamList, TabOneParamList, TabTwoParamList } from '../types';
+import Meditate from '../screens/Meditate';
+import Audios from '../screens/Audios';
+import { BottomTabParamList, TabOneParamList, MeditateParamList, TabBreatheParamList } from '../types';
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -26,8 +28,15 @@ export default function BottomTabNavigator() {
         }}
       />
       <BottomTab.Screen
-        name="TabTwo"
-        component={TabTwoNavigator}
+        name="Sleep"
+        component={Meditate}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Breathe"
+        component={Breathe}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
@@ -44,6 +53,20 @@ function TabBarIcon(props: { name: React.ComponentProps<typeof Ionicons>['name']
 
 // Each tab has its own navigation stack, you can read more about this pattern here:
 // https://reactnavigation.org/docs/tab-based-navigation#a-stack-navigator-for-each-tab
+const BreatheStack = createStackNavigator<TabOneParamList>();
+
+function BreatheNavigator() {
+  return (
+    <BreatheStack.Navigator>
+      <BreatheStack.Screen
+        name="Breathe"
+        component={TabOneScreen}
+        options={{ headerTitle: 'Breathe' }}
+      />
+    </BreatheStack.Navigator>
+  );
+}
+
 const TabOneStack = createStackNavigator<TabOneParamList>();
 
 function TabOneNavigator() {
@@ -58,16 +81,21 @@ function TabOneNavigator() {
   );
 }
 
-const TabTwoStack = createStackNavigator<TabTwoParamList>();
+const MeditateStack = createStackNavigator<MeditateParamList>();
 
-function TabTwoNavigator() {
+function MeditateNavigator() {
   return (
-    <TabTwoStack.Navigator>
-      <TabTwoStack.Screen
-        name="TabTwoScreen"
-        component={TabTwoScreen}
+    <MeditateStack.Navigator>
+      <MeditateStack.Screen
+        name="Meditate"
+        component={MeditateScreen}
         options={{ headerTitle: 'Tab Two Title' }}
       />
-    </TabTwoStack.Navigator>
+      <MeditateStack.Screen
+        name="Audios"
+        component={AudiosScreen}
+        options={{ headerTitle: 'Tab Two Title' }}
+      />
+    </MeditateStack.Navigator>
   );
 }
