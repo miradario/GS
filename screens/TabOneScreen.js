@@ -7,25 +7,25 @@ export default class App extends React.Component {
     return (
       <View style={styles.container}>
         <Pulse
-          color="#008a00"
+          color="lime"
           numPulses={5}
           diameter={1000}
-          speed={5}
+          speed={60}
           duration={3000}
         />
         <Pulse
           color="#ffff01"
-          numPulses={10}
-          diameter={500}
-          speed={10}
-          duration={2000}
+          numPulses={5}
+          diameter={1000}
+          speed={60}
+          duration={3000}
         />
         <Pulse
-          color="#F6F62F"
-          numPulses={10}
-          diameter={500}
-          speed={5}
-          duration={1000}
+          color="lime"
+          numPulses={5}
+          diameter={100}
+          speed={60}
+          duration={3000}
         />
       </View>
     );
@@ -40,7 +40,7 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     width: SIZE,
-    height: height,
+    height: height - 105,
     // paddingTop: 400,
   },
 });
