@@ -1,4 +1,5 @@
 // @flow
+import moment from "moment";
 import * as React from "react";
 import {
   View,
@@ -12,26 +13,42 @@ import {
   Switch,
   Linking,
   Share,
-  H1,
-  H3,
-  Button,
-  Text,
-  Icon,
 } from "react-native";
-import BaseContainer from "../components/BaseContainer";
-import Images from "../components/Images";
-import BackArrow from "../components/BackArrow";
-
+import { H1, H3, Button, Text, Icon } from "native-base";
+import {
+  BaseContainer,
+  Images,
+  Styles,
+  BackArrow,
+  CachedImage,
+} from "../components";
+import {
+  checkFav,
+  checkDownload,
+  addFav,
+  removeFav,
+  removeDownload,
+  saveDownloadData,
+  getDownloadsContent,
+} from "../modules/firebaseAPI";
+import {
+  storeOfflineAsset,
+  deleteOfflineAsset,
+  storeOfflineImages,
+} from "../modules/localStorageAPI";
 import type { ScreenProps } from "../components/Types";
-
 import WindowDimensions from "../components/WindowDimensions";
 import { Ionicons } from "@expo/vector-icons";
-
-import variables from "../../native-base-theme/variables/commonColor";
+import { Constants } from "expo";
+import variables from "../native-base-theme/variables/commonColor";
 import COLORS from "../assets/Colors";
-import translate from "../../utils/language";
-import * as commonFunctions from "../../utils/common.js";
+import ButtonGD from "../components/ButtonGD";
+import translate from "../utils/language";
+
+import * as commonFunctions from "../utils/common.js";
+import { checkInternetConnection } from "react-native-offline";
 import Toast, { DURATION } from "react-native-easy-toast";
+import dynamicLinks from "@react-native-firebase/dynamic-links";
 
 const btnPlay = Images.play_btn;
 
@@ -77,18 +94,18 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
   }
 
   async checkIfFav() {
-    let isFav = await checkFav(this.props.navigation.getParam("key"));
+    let isFav = await checkFav(props.route.params.key);
     this.setState({ isFav: isFav });
   }
 
   async checkIfDownload() {
-    let isDownload = await checkDownload(this.props.navigation.getParam("key"));
+    let isDownload = await checkDownload(this.props.route.params.key);
     this.setState({ isDownload });
   }
 
   async componentDidMount() {
     const { navigation } = this.props;
-    const key = navigation.getParam("key");
+    // const key = navigation.route.params.key;
     commonFunctions.matomoTrack("screen", "audioMenu");
     const connected = await checkInternetConnection();
     if (connected) {
@@ -103,16 +120,16 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
   }
 
   StartMeditation(navigation) {
-    (this.state.title = this.props.navigation.state.params.title),
-      (this.state.key = this.props.navigation.getParam("key")),
-      (this.state.photo = this.props.navigation.getParam("photo"));
-    this.state.duration = this.props.navigation.getParam("duration");
+    (this.state.title = navigation.state.params.title),
+      (this.state.key = navigation.route.params.key),
+      (this.state.photo = navigation.route.params.photo);
+    this.state.duration = navigation.route.params.duration;
 
     navigation.navigate("AudiosPlayer", {
       ptitle: this.state.title,
       key: this.state.key,
-      category: this.props.navigation.getParam("category"),
-      checkbkgmusic: this.props.navigation.getParam("music"),
+      category: this.props.navigation.route.params.category,
+      checkbkgmusic: this.props.navigation.route.params.music,
       //url: this.state.url,
       photo: this.state.photo,
       duration: this.state.duration,
@@ -133,7 +150,7 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
     }
   };
 
-  /*  handleDownloadClick = async () => {
+  handleDownloadClick = async () => {
     const { isDownload } = this.state;
     const key = this.props.navigation.getParam("key");
     const assetData = {
@@ -161,13 +178,13 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
       this.setState({ downloading: false });
     }
     await getDownloadsContent();
-  }; */
+  };
 
-  /*  alertErrorDownloading = () => {
+  alertErrorDownloading = () => {
     const title = "Download not completed";
     const message = "Try again later";
     Alert.alert(title, message);
-  }; */
+  };
 
   handlePlay() {
     this.StartMeditation(this.props.navigation);
@@ -191,7 +208,7 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
     }
   }
 
-  /* generateLink = async (key) => {
+  generateLink = async (key) => {
     const { navigation } = this.props;
     const cat = "&category=" + navigation.getParam("category");
 
@@ -211,7 +228,7 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
     );
 
     return link;
-  }; */
+  };
 
   onShare = async () => {
     const { navigation } = this.props;
@@ -236,18 +253,26 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
 
   render(): React.Node {
     const { navigation } = this.props;
-    const url = navigation.getParam("url", "some default value");
-    const photo = navigation.getParam("photo", "");
-    const title = navigation.getParam("title", "");
-    const music = navigation.getParam("music", false);
-    const id = navigation.getParam("key", false);
+    // const url = navigation.state.params.url;
+    const photo = ""; //navigation.getParam("photo", "");
+    const title = ""; //navigation.getParam("title", "");
+    const Description = ""; //navigation.getParam("title", "");
 
+    const music = ""; //navigation.getParam("music", false);
+    const trainer = ""; //navigation.getParam("music", false);
+    const duration = ""; //navigation.getParam("music", false);
+
+    const id = ""; //navigation.getParam("key", false);
+    const today = moment();
+    const date = today.format("MMMM D");
     const { isFav, connected } = this.state;
 
     let heartColor = COLORS.lightgray;
     if (isFav) {
       heartColor = COLORS.orange;
     }
+
+    Images.yoga = photo;
 
     return (
       <BaseContainer title="" navigation={this.props.navigation} backBtn>
@@ -302,17 +327,15 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
               </View>
             </TouchableOpacity>
           )}
-          {/*  {connected && (
+          {connected && (
             <DownloadButton
               handleClick={this.handleDownloadClick}
               downloadEnabled={!this.state.isDownload}
               downloading={this.state.downloading}
             />
-          )} */}
+          )}
           <View style={style.img}>
-            <Text style={style.audioTitle}>
-              {this.capitalize(this.props.navigation.state.params.title)}
-            </Text>
+            <Text style={style.audioTitle}>{this.capitalize(title)}</Text>
             <View style={style.playButtonWrapper}>
               <TouchableOpacity onPress={() => this.handlePlay()}>
                 <View style={style.playButton}>
@@ -320,7 +343,7 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
                 </View>
               </TouchableOpacity>
             </View>
-            {/*  <CachedImage
+            <CachedImage
               source={{ uri: photo }}
               resizeMode="cover"
               style={[
@@ -329,7 +352,7 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
                 { backgroundColor: COLORS.gray },
               ]}
               title={`${id}_cover`}
-            /> */}
+            />
           </View>
           {/* {this.state.controlsVisible ? (
             <View style={style.indicator}>
@@ -389,21 +412,19 @@ export default class Audios extends React.PureComponent<ScreenProps<>> {
               }}
             >
               <Text style={{ fontWeight: "bold" }}></Text>
-              {this.props.navigation.state.params.Description}
+              {Description}
             </Text>
           </View>
           <View style={style.section}>
             <Icon name={"ios-timer"} style={{ color: COLORS.orange }} />
             <Text style={{ paddingLeft: 32, color: COLORS.gray }}>
-              <Text style={{ fontWeight: "bold" }}> </Text>{" "}
-              {this.props.navigation.state.params.duration}
+              <Text style={{ fontWeight: "bold" }}> </Text> {duration}
             </Text>
           </View>
           <View style={style.section}>
             <Icon name={"ios-person"} style={{ color: COLORS.orange }} />
             <Text style={{ paddingLeft: 32, color: COLORS.gray }}>
-              <Text style={{ fontWeight: "bold" }}></Text>{" "}
-              {this.props.navigation.state.params.trainer}
+              <Text style={{ fontWeight: "bold" }}></Text> {trainer}
             </Text>
           </View>
         </ScrollView>

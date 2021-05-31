@@ -13,23 +13,42 @@ import Animated, {
   withTiming,
 } from "react-native-reanimated";
 import { mix } from "react-native-redash";
+import { Audio } from 'expo-av';
 
 import Circle from "./Circle";
+
+
+
+
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "white",
+    backgroundColor: "#7aff00",
   },
 });
 const Breathe = () => {
   const progress = useSharedValue(0);
   const goesDown = useSharedValue(false);
+  
+  /* 
+  const soundObject = new Audio.Sound();
+  try {
+    soundObject.loadAsync(require('../../assets/audios/breathe.mp3'));
+    
+    soundObject.playAsync();
+    soundObject.setVolumeAsync(0.006);
+    soundObject.setPositionAsync(0);
+    soundObject.setRateAsync(1, false);
+  } catch (error) {
+    console.log (error); // An error occurred!
+  } */
+  
   useEffect(() => {
     progress.value = withRepeat(
       withTiming(
         1,
-        { duration: 3000, easing: Easing.bezier(0.5, 0, 0.5, 1) },
+        { duration: 4000, easing: Easing.bezier(0.09,0.51,0.63,0.91) },
         () => (goesDown.value = !goesDown.value)
       ),
       -1,

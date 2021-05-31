@@ -6,16 +6,10 @@ import {
   FlatList,
   TouchableOpacity,
   Image,
-  StatusBar,
   ActivityIndicator,
-  Alert,
 } from "react-native";
-import { H3 } from "native-base";
 import { Ionicons } from "@expo/vector-icons";
 
-import { FavButton } from "../components/FavButton";
-import { LockButton } from "../components/LockButton";
-import { Styles } from "../components/Styles";
 import {
   getContent,
   getFavouritesID,
@@ -26,8 +20,6 @@ import {
 import WindowDimensions from "./WindowDimensions";
 import COLORS from "../assets/Colors";
 import { LinearGradient } from "expo-linear-gradient";
-
-import * as FirebaseAPI from "../modules/firebaseAPI";
 
 // const urlimg = 'https://gesundes-und-achtsames-fuehren.de/assets/app/image/';
 const urlimg =
@@ -183,7 +175,6 @@ export default class ListMeditate extends Component {
               refresh={this.state.selectedCat}
               data={cat}
               showsHorizontalScrollIndicator={false}
-              horizontal
               renderItem={({ item, index }) => (
                 <CategoryButton
                   section={this.state.sections}
@@ -385,9 +376,9 @@ class MeditationRow extends React.PureComponent {
         </View>
         <FlatList
           style={{ alignSelf: "stretch" }}
-          columnWrapperStyle={{ justifyContent: "space-between" }}
+          //columnWrapperStyle={{ justifyContent: "space-between" }}
           horizontal={false}
-          numColumns={2}
+          numColumns={1}
           showsHorizontalScrollIndicator={false}
           keyExtractor={(item) => item.id.toString()}
           data={meditations}
@@ -476,9 +467,9 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     bottom: 0,
-    right: 0,
-    width: WindowDimensions.width * 0.4,
-    height: WindowDimensions.width * 0.4 * (140 / 130),
+    right: 60,
+    width: WindowDimensions.width * 0.85,
+    height: WindowDimensions.width * 0.4,
     opacity: 0.9,
     borderRadius: 15,
   },

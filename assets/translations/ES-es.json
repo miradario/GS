@@ -1,0 +1,308 @@
+{
+    
+    "Login": {
+        "login": "Iniciar sesión", 
+        "user": "Usuaro",
+        "signin": "Registrarse",
+        "dont_have": "¿No tienes una cuenta? Regístrate", 
+        "remember": "¿No recuerdas tu contraseña?",   
+        "forgot": "Se te olvidó tu contraseña",
+        "check": "Revisa tu correo electrónico",
+    },
+    "Signup":{
+        "name": "Nombre",
+        "email": "Correo electónico",
+        "password": "Contraseña",
+        "workshop": "Tengo un Código de workshop",
+        "enterWorkshop": "Introduce el Código de workshop",
+        "already": "Ya tienes una cuenta?",
+        "signin": "Al registrarte aceptas",
+        "terms": "Terminos de politica de datos",
+        "signup": "Registrate",
+        "login": "Iniciar sesión",
+        "language": "Idioma",
+        "limit": "Límite de usuarios excedido, no se puede acceder",      
+        "workshop_code": "Código de Workshop incorrecto"
+        
+    },
+    
+    "Challenge" : {
+        "abandoned": "Abandono",
+        "current": "Actual",
+        "notstarted": "No empezado",
+        "finished": "Terminado",
+        "createChallenge": "Nuevo desafío",
+        "completed": " Completado",
+        "editChallenge": "Editar desafío",
+        "title": "Nombre de mi desafío",
+        "what": "¿Qué hare durante los próximos 21 días? ",
+        "start_date": "Fecha de inicio",
+        "next": "Siguiente",
+        "delete": "Eliminar",
+        "icon": "Icono",
+        "time": "¿A qué hora deseas implemetar?",
+        "why": "¿Por qué eligió este desafío? ",
+        "success": "¿Cómo puedo medir mi éxito? ",
+        "problems": "¿Qué obstáculos enfrentaré? ¿Cómo los superaré?",
+        "mountain": "Imagen de montaña",
+        "add": "Añadir",
+        "update": "Actualizar",
+        "validation": "Validación del desafío",
+        "fill": "Por favor, complete todos los campos y seleccione el ícono de desafío",        
+       "limit": "Limite alcanzado - Max 3 desafios a la vez",
+        "no_completed": "Aún no se han completado desafíos"
+    },
+    "Walkthrough" : {
+        "offers": "TLEX ofrece capacitaciones personalizadas en Mindfulness, \n Agilidad y Liderazgo",
+        "inspire" : "Inspiramos a las personas y las empresas a ser \n lo mejor que pueden ser. Nos centramos en la individualidad, la conciencia, la conexión del equipo, el compromiso organizativo y la visión compartida para sacar lo mejor de usted y su equipo.",
+        "access": "Nuestra aplicación TLEX Flow te da acceso a herramientas y ejercicios exclusivos \n que se enseñan en nuestros talleres",        
+        "follow":"Sigue los pasos y comienza tu viaje tranformador hoy mismo!",
+        "more": "Para obtener más información sobre nuestros programas de formación, vaya a Más",
+        "next" : "Siguiente",
+        "behavior": "Cambiar el comportamiento no es una tarea fácil",        
+        "challenge": "En la sección Desafío de la aplicación, \n te animamos a que elijas un hábito o comportamiento que te gustaría cambiar en tu vida diaria (p. Ej., hacer un ejercicio de atención plena todos los días) o algo que no quieras hacer más (p. ej., dejar de cenar con el teléfono móvil sobre la mesa)",       
+        "continue": "Seguir",
+        "welcome": "Bienvenido. Tu prueba gratuita de siete días comienza ahora",
+        "content": "Accede a todo el contenido con tu código de taller o elige tu plan de suscripción ahora",        
+         "unlock": "DESBLOQUEAR ACCESO ILIMITADO",
+        "continuefree": "Continuar con acceso limitado",
+    },
+    "Purchase": {
+        "unlock": "Desbloquear TLEX Flow",
+        "meditation": "Más de 60 ejercicios de atención plena guiados que te ayudarán a relajarte, concentrarte y aumentar tu energía",
+        "breathing": "Ejercicios de respiración que tendrán un impacto positivo inmediato en tu cuerpo y mente.",
+        "special": "Herramientas especiales para usar en su lugar de trabajo para recuperar el enfoque, aumentar su creatividad y entrar en el asombroso estado de flujo",
+        "sleep": "Meditaciones guiadas para ayudar a mejorar la calidad de su sueño.",
+        "music": "Listas de música exclusivas para ayudarte a relajarte",
+        "walks": "Caminatas guiadas de mindfulness",
+        "new": "Actualizaciones constantes y nuevas funciones",
+        "monthly": "Mensual",
+        "billed_monthly" : "Facturado mensualmente",
+        "most": "MAS POPULAR",
+        "yearly": "Anual",
+        "billed_yearly" : "facturado anualmente",
+        "lifetime": "Toda la vida",
+        "once" : "facturado una vez",
+        "terms": "Condiciones de suscripción",
+        "suscription": "La suscripción a Tlex Flow se renueva automáticamente a menos que la renovación automática se desactive al menos 24 horas antes de que finalicen los períodos actuales. El pago se carga a su",
+        "suscription2": "cuenta. Administra las suscripciones y desactiva la renovación automática en la Configuración de la cuenta",
+        "workshop1" : "Si tiene un código de taller, haga clic en",
+        "here": "aquí",
+        "insert_code" :  "inserte el código para acceder al contenido premium",
+        "terms_policy": "Términos y política de privacidad"
+    },
+     "Mountain": {
+        "edit": "editar",
+        "info": "+Info",
+        "what": "que",
+        "When": "cuando",
+        "start_date": "Fecha de inicio",
+        "missed": "Perdido",
+        "uncheck":"Desmarcar",
+        "check": "Mira este día",
+        "close": "Cerrar",
+        "challenges": "desafios",
+        "checked": "¡Día sin marcar!",
+        "check_day": "Mira este día"
+        
+    },
+    "Home": {
+        "takeadeep": "Toma un respiro",
+        "hi": "Hola",
+        "last_challenge": " Accede a tu último desafío",
+        "future_challenge": "Tus desafíos aún no han comenzado",
+        "no_challenges": "No tienes desafíos activos",
+        "createChallenge": "Nuevo desafío",   
+        "list": "Lista de artículos",
+        "favourites": "Favoritos",
+        "press_any": "Presiona el ícono del corazón en cualquier contenido seleccionado y aparecerá debajo de favoritos",
+        "downloads": "Mis descargas",
+        "recommendations": "Recomendaciones para ti",
+        "mindful_break": "Mindful @Pausa",
+        "mindful_breath": "Mindful @Respiración",
+        "mindful_work": "Mindful @Oficina",
+        "offline": "Comprueba tu conexión a internet. Mientras estes offline puedes reproducir tu contenido descargado en la sección ",
+        "section": "",
+        "swipe": "Deslizar hacia arriba"
+    },
+    "Menutab": {
+        "home": "Inicio",
+        "mindfullness": "@Pausa",
+        "challenges": "Desafíos",
+        "work": "@Oficina",
+        "breath": "@Respirar",
+        "more": "Más"
+    },
+    "Mindfulness": {
+        "mindfulness": "Mindfulness",
+        "sleep": "Dormir",
+        "music": "Música",
+        "walk": "Caminata consciente"
+    },
+    "Work": {
+        "desk": "Mindful Escritorio",
+        "streching": "Estiramiento de escritorio",
+        "micro": "Micro Momentos",
+        "meetings": "Reuniones conscientes"
+    },
+    "Breath": {
+        "tools": "Ejercicios de respiración",
+        "course": "Ejercicios de Respiración del Curso"
+    },
+    "More": {
+        "sleep": "Dormir" ,
+        "music": "Música",
+        "teachers": "Entrenadores",
+        "workshop": "Recursos del taller",
+        "settings": "Configuraciones",
+        "faq": "FAQ",
+        "mydownloads": "Mis Descargas" ,
+        "weekly": "Inspiración Semanal" 
+    },
+    "Weeklyphrases": {
+        "weeklyphrases": "Frase Semanal",
+        "notificationtitle": "Inspiración semanal",
+        "notificationbody": "Chequear la nueva frase inspiracional",
+        "gotoinspiration": "Ir a Inspiración"
+    },
+    "Settings": {
+        "name": "Nombre",
+        "email": "Correo electrónico",
+        "password": "Contraseña",
+        "currentpassword": "Introducir la contraseña actual",
+        "company": "Compañía",
+        "language": "Idioma",
+        "workshopcode": "Código de taller",
+        "notifications": "Notificaciones",
+        "enter_password": "Ingrese una nueva contraseña para cambiarla",
+        "enter_newemail": "Ingrese un nuevo correo electrónico para cambiarlo",
+        "change_password": "Cambiar contraseña o correo electrónico",
+        "click": "HAGA CLIC AQUÍ PARA BORRAR LA CUENTA",
+        "allow": "Permitir notificaciones en este dispositivo",
+        "about" : "Acerca de TLEX",
+        "update": "Actualizar",
+        "logout": "CERRAR SESIÓN",
+        "optout": "Analítica",
+        "stopanalytics": "no compartir datos de uso",
+        "profile": "Perfil", 
+        "account": "Cuenta", 
+        "notification": "Notificación",
+        "workshopnotfound": "No se encontró el código del taller. Para el público, déjelo en blanco",
+        "delete_error": "Error al eliminar usuario",
+        "passwordincorrect": "Password actual incorrecto",
+        "delete_user": "Borrar usuario",
+        "del_usr_msg": "¿Está seguro de que desea eliminar su usuario?",
+        "cancel": "Cancelado"
+        
+    },
+    "Suscription":{
+        "title": "Comprar suscripción",
+    },
+    "Audios": {
+        "background": "Sonidos de fondo",
+        "downloadsadded": "Agregado a Descargas",
+        "downloadsremoved": "Quitado de Descargas",
+        "found": "Tomese un momento de paz para usted con esta práctica:"
+        
+
+    },
+    "Meditation":{
+        "congrats" : "Felicidades!",
+        "Complete": "Completo",
+        "completed":"Has completado",
+        "seconds": "segundos",
+        "minutes": "minutos",
+        "of_mindfulness": "de mindfulness",
+        "back": "de regreso" 
+    },
+ 
+    "Workshop":
+    {
+        "workshop": "Recursos del taller",
+        "only": "solo para taller",
+    },
+    "Notification": {
+        "title" : "Notificación",
+        "set": "Establecer notificación",
+        "remind": "Recuérdame estos días",
+        "time": "En este momento",
+        "config_cha":  "Recordatorio de desafío",
+        "config_sleep": "Recordatorio de sueño",  
+        "config_mind": "Recordatorio de Mindfulness",
+        "change": "Cambiar hora de notificación",
+        "enablePhrases": "Notificación de Frase Inspirational   ",
+        "allow": "Habilitar notificaciones en este dispositivo",
+        "day0": "Do",
+        "day1": "Lu",
+        "day2": "Ma",
+        "day3": "Mi",
+        "day4": "Ju", 
+        "day5": "Vi",
+        "day6": "Sa",
+        "sleep": "Dormir",
+        "challenge": "Desafío",
+        "mindful": "Mindful"
+    
+ 
+    
+    },
+    "FAQ": {
+        "Q1": "¿Como puedo cambiar mi contraseña?",
+        "R1": "Vaya a la barra de herramientas> Más> Configuración> Habilitar 'Cambiar mi contraseña'> Ingrese una nueva contraseña> Haga clic en 'Actualizar'> Cerrar sesión \n",
+        "Q2": "¿Cómo elimino mi cuenta de forma permanente?",
+        "R2": "Vaya a la barra de herramientas> Más> Configuración> Habilitar 'Operaciones que requieren contraseña actual'> Complete su contraseña actual> Eliminar cuenta> Confirme presionando “eliminar usuario”>. ADVERTENCIA: Todos sus datos, desafíos y progresos se eliminarán de forma permanente. \n ",
+        "Q3": "¿Cómo agrego / elimino favoritos?",
+        "R3": "Para cualquier contenido de video o audio, puede tocar el corazón en la esquina superior derecha para agregarlo a sus favoritos. Si desea eliminar contenido de Favoritos, vuelva a tocar el corazón y se desmarcará. \n",
+        "Q4": "Mi aplicación está fallando",
+        "R4": "Siga estos pasos si usa un iPhone \n \n Reinicie su iPhone \n Actualice su aplicación \n Desinstale y vuelva a instalar la aplicación \n Actualice el software de su iPhone \n DFU restaure su iPhone (consulte los canales de YouTube para saber cómo hacerlo para su modelo de teléfono) \n \n Siga estos pasos si está utilizando un dispositivo Android \n \n Reinicie su dispositivo \n Vuelva a instalar la aplicación \n Borre los datos y la caché de la aplicación \n Asegure una conexión Wi-Fi estable \n Limpie la partición de la caché \n",
+        "Q5": "¿Cómo configuro la aplicación para no recibir notificaciones mientras medito?",
+        "R5": "En iPhone, ve a Configuración> No molestar> Activar y desplázate hacia abajo para configurar tus propias preferencias (Silencio> Siempre asegurará que no recibas notificaciones. Luego, verifica tus preferencias para llamadas). \n En Configuración de Android> Sonidos > No molestar> Solo prioridad permite el menú (etiquetado como 'Permitir excepciones' en dispositivos Samsung), configure las opciones de Mensajes y Llamadas en 'Solo de contactos destacados' (o 'Solo contactos favoritos' en Samsung). \n",
+        "Q6": "¿Cómo administro la configuración si quiero quedarme dormido mientras uso la aplicación?",
+        "R6": "En iPhone, ve a Configuración> No molestar> Activar y desplázate hacia abajo para configurar tus propias preferencias (Silencio> Siempre asegurará que no recibas notificaciones. Luego, verifica tus preferencias de llamadas). También puede ir a Configuración> Pantalla y brillo y desplazarse hacia abajo para establecer el 'bloqueo automático' en 2 minutos. Su ejercicio de atención plena seguirá reproduciéndose incluso si la pantalla está bloqueada. \n En Android, vaya a Configuración> Pantalla> Suspender (su dispositivo puede decir Tiempo de espera de la pantalla o algo similar)> Simplemente elija la cantidad de tiempo que mejor funcione para usted. \n",
+        "Q7": "¿Cómo desactivo todas las notificaciones de la aplicación?",
+        "R7": "Vaya al menú de la aplicación 'Más'> Configuración> Desactive el botón que dice 'Permitir notificaciones en este dispositivo. \n",
+        "Q8": "¿Por qué es benefcioso hacer técnicas de respiración y no solo ejercicios de Mindfulness?",
+        "R8": "Los ejercicios de respiración nos ayudan a relajarnos. La respiración está estrechamente relacionada con nuestro sistema nervioso vegetativo (o autónomo) que controla y regula los órganos y controla la alternancia entre la tensión y la relajación en el organismo humano. De hecho, la respiración es la única forma en que los seres humanos pueden influir conscientemente en el sistema nervioso autónomo. Si respiramos larga y profundamente, se estimula el nervio vago (parte del sistema nervioso autónomo), lo que tiene un efecto calmante a medida que la frecuencia cardíaca y la presión arterial disminuyen y los músculos se relajan. \n Por lo tanto, la respiración consciente es un mecanismo poderoso para mantener la calma y enfocarnos mientras anclamos nuestra mente en el momento presente. \n Las investigaciones muestran que la respiración consciente tiene un profundo impacto curativo en nuestra fisiología, y es una de las formas más sencillas de restablecernos. Hacer una pausa para respirar profundamente puede permitirnos soltar los pensamientos negativos, tener una experiencia más profunda de mindfulness y entrar en la siguiente actividad o interacción con nuevos ojos, energía y entusiasmo. \n ",
+        "Q9": "¿Cuáles son los beneficios de los ejercicios de mindfulness?",        
+        "R9": "Los beneficios del mindfulness son innumerables. Según la investigación, los ejercicios de minsfulness ayudan a: \n \n Reducir el estrés \n Mejorar la memoria \n Reducir los pensamientos depresivos \n Mejorar el enfoque \n Mejor satisfacción en la relación \n Disminuir la queja \n Disminuir la ansiedad \n Mejorar la calidad del sueño \n Mejorar la empatía y comprensión \n Contribuir a la mejora general de la calidad de vida \n \n La práctica de la meditación puede incluso cambiar la estructura del cerebro, como lo demostró un equipo de investigadores de la Universidad de Giessen, el Hospital General de Massachusetts y la Escuela de Medicina de Harvard en Boston. El equipo de investigación descubrió que la práctica de meditación de 8 semanas provoca cambios en la densidad de la materia gris del cerebro, específicamente en las regiones del cerebro que son responsables de las reacciones de estrés, la empatía, la autopercepción y la memoria. \n",
+        "Q10": "¿Me van a cobrar por usar esta aplicación?",
+        "R10": "Se puede acceder a la primera versión de la aplicación TLEX Flow a través de un código que puede obtener de su empresa o de los entrenadores de TLEX. La segunda versión se incluirá en las compras de aplicaciones. \n ",            
+        "Q11": "¿Quiénes son los insructores que guían las prácticas de mindfulness?",        
+        "R11": "Los instructores TLEX son de todo el mundo. Vienen de diferentes países, de diferentes ámbitos de la vida y hablan muchos idiomas diferentes además del inglés. Los instructores de TLEX son practicantes del mindfulness con décadas de experiencia en la capacitación de líderes en corporaciones, academias y organizaciones sociales para inspirar a otros líderes a través de la excelencia personal. \n",
+        "Q12": "¿Cómo puedo contactar a TLEX para guiar un taller en mi lugar de trabajo?",
+        "R12": "Puede enviarnos un correo electrónico a info@TLEXProgram.com \n",
+        "Q13": "¿De qué otra manera puedo conectarme a TLEX en línea?",
+        "R13": "TLEX Institute está presente en las siguientes plataformas de redes sociales \n Linkedin: https://www.linkedin.com/company/tlexinstitute/ \n Facebook: https://www.facebook.com/TLEXEurope/ \n Instagram: https: //www.instagram.com/tlexinstitute/ \n Twitter: https://twitter.com/tlexinstitute \n Contáctenos \n Si no puede encontrar una respuesta a su pregunta en los artículos anteriores , puede enviarnos un correo electrónico directamente a app@tlexinstitute.com \n",
+        "Q14": "¿Cómo puedo cancelar mi suscripción anual o mensual?",
+        "R14": "En iOS: \n - Abra la Configuración en su iphone. \n - Toque su nombre. \n - Toque Suscripciones. (Si no ves Suscripciones, presiona iTunes y AppStore en su lugar. \n - Presiona la suscripción que deseas administrar \n - Presiona Cancelar suscripción \n \n En Android: \n - En tu teléfono o tableta Android, abre el Google Play Store \n: comprueba si has iniciado sesión en la cuenta de Google correcta \n - Presiona Menú. Suscripciones \n - Selecciona la suscripción que deseas cancelar \n - Presiona Cancelar suscripción \n - Sigue las instrucciones \n",
+        "Q15": "¿Cómo funcionan las suscripciones mensuales y anuales?",        
+        "R15": "Para las suscripciones anuales y mensuales, el acceso premium está vinculado a la cuenta de la tienda del usuario (AppStore o PlayStore), no a la cuenta de usuario de TLEX. Asegúrese siempre de usar la misma cuenta de la tienda en todos sus dispositivos para obtener el acceso premium de TLEX Flow. \n",
+        "Q16": "¿Cómo funciona la suscripción de por vida?",
+        "R16": "Para las compras de Lifetime Access, el usuario tendrá acceso a contenido premium con la cuenta de TLEX Flow, en cualquier dispositivo.\n", 
+        "Q17": "¿Mi suscripción tiene un período de prueba?",
+        "R17": "Hay una prueba de 7 días, pero solo la primera vez que el usuario compra una suscripción. El acceso de por vida no tiene un período de prueba. \n",
+        "able": "Si no puede encontrar una respuesta a su pregunta en los artículos anteriores, puede enviarnos un correo electrónico directamente.",
+    },
+    "About":{
+        "about" : "Sobre TLEX",
+        "desc": "TLEX GmbH \n Renggstrasse 33 \n 6052 Hergiswil \n Suiza \n \n \n Teléfono: +41 4197 03873 \n Correo electrónico: europe@tlexinstitute.com \n \n \n Representado por la junta directiva: Christoph Glaser, Marcel Verbay, Rajita Kulkarni \n Número de identificación comercial: CHE-388.181.787 \n TLEX está registrado en Handelsregisteramt des Kanton Nidwalden",
+        "back": "atrás" 
+    },
+    "Download": {
+        "my_downloads": "Mis Descargas",
+        "empty" : "No hay descargas",
+        "download": "Descargar"
+    },
+    "Share": {
+        "share":"Compartir",
+        "previous": "Anterior",
+        "current": "Siguiente",
+        "cancel": "Cancelar",
+        "platform_ask": "¿Desea compartir en Historias de Instagram o Otras aplicaciones?",
+        "IGs": "Historias de Instagram"
+
+
+    }
+    
+    
+}

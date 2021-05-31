@@ -9,7 +9,7 @@ import { clamp, mix, polar2Canvas } from "react-native-redash";
 import { LinearGradient } from "expo-linear-gradient";
 
 const { width, height } = Dimensions.get("window");
-const SIZE = width / 2;
+const SIZE = width ;
 const styles = StyleSheet.create({
   container: {
     ...StyleSheet.absoluteFillObject,
@@ -20,7 +20,7 @@ const styles = StyleSheet.create({
     width: SIZE,
     height: SIZE,
     borderRadius: SIZE / 2,
-    opacity: 0.5,
+    opacity: 0.3,
   },
 });
 
@@ -57,10 +57,10 @@ const Circle = ({ progress, goesDown, index }: CircleProps) => {
   return (
     <>
       <Animated.View style={[styles.container, style1]}>
-        <LinearGradient colors={["#62BFA1", "#529CA0"]} style={styles.circle} />
+        <LinearGradient colors={["#62BFA1", "yellow"]} style={styles.circle} />
       </Animated.View>
       <Animated.View style={[styles.container, style]}>
-        <LinearGradient colors={["#62BFA1", "#529CA0"]} style={styles.circle} />
+        <LinearGradient colors={["#ffff01", "green"]} style={styles.circle} />
       </Animated.View>
     </>
   );
